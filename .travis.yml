@@ -1,14 +1,22 @@
-sudo: required
-services:
-  - docker
+# ------------------------------------------------------------------------
+# The test process is stopped,
+# since I'll be no longer using/testing this project.
+# ------------------------------------------------------------------------
 
-before_install:
-  - docker build -t victortsokonov/docker-react -f Dockerfile.dev .
+# sudo: required
+# services:
+#   - docker
 
-script:
-  - docker run -e CI=true victortsokonov/docker-react npm run test
+# before_install:
+#   - docker build -t victortsokonov/docker-react -f Dockerfile.dev .
+
+# script:
+#   - docker run -e CI=true victortsokonov/docker-react npm run test
+
+# ------------------------------------------------------------------------
 # The deployment process is stopped,
-# since I terminated my application in AWS
+# since I terminated my application in AWS.
+# ------------------------------------------------------------------------
 
 # deploy:
 #   provider: elasticbeanstalk
@@ -21,3 +29,5 @@ script:
 #     branch: main
 #   access_key_id: "$AWS_ACCESS_KEY"
 #   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+
+# ------------------------------------------------------------------------
